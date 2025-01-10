@@ -1,11 +1,10 @@
 from fastapi import FastAPI, Response
 from fastapi.responses import JSONResponse
-from dotenv import load_dotenv
 from datetime import datetime
 import os
 
-load_dotenv()
 app = FastAPI()
+print("App is running!")
 
 @app.get("/liveness")
 def ping():

@@ -18,7 +18,7 @@ For external terminal activate `venv`
 ```
 > To close `venv` run command `deactivate`
 
-Run app
+Run app with command or using VSCode launch
 ```sh
-uvicorn main:app --host 0.0.0.0 --port 5001 --reload
+uvicorn main:app --host 0.0.0.0 --port 5001 --env-file .env --reload
 ```

@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "local run",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "main:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "5001",
+                "--reload"
+            ],
+            "jinja": true
+        },
+        {
+            "name": "Attach Python",
+            "type": "debugpy",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}

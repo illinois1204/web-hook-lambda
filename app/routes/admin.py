@@ -1,19 +1,26 @@
-from fastapi import APIRouter, status, Depends, Request
+from fastapi import APIRouter, Depends, Request, status
 from fastapi.responses import JSONResponse
+
 from internal.tools.jwt import JWT, IToken
-from ..schemas.auth.login import ILogin 
+
 from ..middleware.auth import UseAuth
+from ..schemas.auth.login import ILogin
 
 Router = APIRouter()
+
 
 @Router.post("/login")
 def signIn(body: ILogin):
     try:
         print(body)
-        return { "token": JWT.generate({ "id": "uuid" }) }
+        return {"token": JWT.generate({"id": "uuid"})}
     except Exception as e:
         print(e)
-        return JSONResponse(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, content={"message": "Oops, something went wrong!"})
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={"message": "Oops, something went wrong!"},
+        )
+
 
 @Router.get("/me", dependencies=[Depends(UseAuth)])
 def me(req: Request):

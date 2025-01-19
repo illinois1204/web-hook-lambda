@@ -2,13 +2,17 @@
 Using VSCode
 
 # 2. Install packages
+#### Server:
+```sh
+pip install "uvicorn[standard]"
+```
 #### Dependencies:
 ```sh
 pip install -r requirements.txt
 ```
-#### Server:
+#### Dev-Dependencies:
 ```sh
-pip install "uvicorn[standard]"
+pip install -r requirements-dev.txt
 ```
 
 # 3. Running

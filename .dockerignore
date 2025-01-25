@@ -4,4 +4,7 @@
 .git*
 __pycache__
 .venv
+venv
+.mypy_cache
 README.md
+pyproject.toml

@@ -1,6 +1,8 @@
-from app.routes import RegisterHTTP
 from fastapi import FastAPI
+
+from app.routes import RegisterHTTP
+from internal.common.constants.console_lights import ColorFG
 
 app = FastAPI()
 RegisterHTTP(app)
-print(f"{'\033[92m'}INFO{'\033[0m'}:\t  App is running!")
+print(ColorFG.GREEN.format("INFO") + ":\t  App is running!")

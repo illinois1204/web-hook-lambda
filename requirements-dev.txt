@@ -1,2 +1,0 @@
-Flake8-pyproject==1.2.3
-py-mon

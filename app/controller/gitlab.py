@@ -3,7 +3,7 @@ import os
 import requests
 
 from app.schemas.gitlab.thread_linter import IThreadLinter
-from internal.common.constants.console_lights import ColorFG
+from internal.constants.console_lights import ColorFG
 
 
 def add_linter_note(input: IThreadLinter):

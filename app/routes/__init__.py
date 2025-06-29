@@ -3,7 +3,7 @@ from typing import List
 
 from fastapi import APIRouter, FastAPI
 
-from . import gitlab
+from . import gitlab, jira
 
 
 @dataclass
@@ -12,7 +12,10 @@ class IProvider:
     prefix: str
 
 
-HttpProvider: List[IProvider] = [IProvider(instance=gitlab.Router, prefix="/gitlab")]
+HttpProvider: List[IProvider] = [
+    IProvider(instance=gitlab.Router, prefix="/gitlab"),
+    IProvider(instance=jira.Router, prefix="/jira/dc"),
+]
 
 
 def RegisterHTTP(app: FastAPI):

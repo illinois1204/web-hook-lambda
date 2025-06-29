@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 
 from app.controller.gitlab import add_linter_note
 from app.schemas.gitlab.thread_linter import IThreadLinter
-from internal.common.constants.http import Http500_Response
+from internal.constants.http import Http500_Response
 
 Router = APIRouter()
 

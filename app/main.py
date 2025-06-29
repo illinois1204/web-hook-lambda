@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from app.routes import RegisterHTTP
-from internal.common.constants.console_lights import ColorFG
+from internal.constants.console_lights import ColorFG
 
 app = FastAPI()
 RegisterHTTP(app)

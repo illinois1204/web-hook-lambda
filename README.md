@@ -1,5 +1,10 @@
 # 1. Create local `venv`
-Using VSCode
+```sh
+python -m venv .venv
+```
+```sh
+py -3.x -m venv .venv
+```
 
 # 2. Install packages
 ```sh
